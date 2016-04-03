@@ -37,7 +37,6 @@ var App = function () {
         console.log('%s: Node server stopped.', Date(Date.now()));
     };
 
-
     /**
      *  Setup termination handlers (for exit and a list of signals).
      */
@@ -65,7 +64,6 @@ var App = function () {
         self.setupTerminationHandlers();
     };
 
-
     self.setupServer = function () {
 
         /**
@@ -73,14 +71,9 @@ var App = function () {
          */
         var app = require('./app');
         var http = require('http');
-        /**
-         * Get port from environment and store in Express.
-         */
-        var port = normalizePort(self.port);
-        /**
-         * Create HTTP server.
-         */
+        //var port = normalizePort(self.port);
         var server = http.createServer(app);
+
         /**
          * Listen on provided port, on all network interfaces.
          */
@@ -88,32 +81,16 @@ var App = function () {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now()), self.ipaddress, self.port);
         });
+
+        /*
         server.on('error', onError);
         server.on('listening', onListening);
-
-        /**
-         * Normalize a port into a number, string, or false.
-         */
-        function normalizePort(val) {
-            var port = parseInt(val, 10);
-
-            if (isNaN(port)) {
-                // named pipe
-                return val;
-            }
-
-            if (port >= 0) {
-                // port number
-                return port;
-            }
-
-            return false;
-        }
+        */
 
         /**
          * Event listener for HTTP server "error" event.
          */
-
+        /*
         function onError(error) {
             if (error.syscall !== 'listen') {
                 throw error;
@@ -137,15 +114,17 @@ var App = function () {
                         throw error;
                 }
         }
+        */
 
         /**
          * Event listener for HTTP server "listening" event.
          */
-
+        /*
         function onListening() {
             var addr = server.address();
             console.log('Server on port : ' + addr.port);
         }
+        */
     };
 };
 

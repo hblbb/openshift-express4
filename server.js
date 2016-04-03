@@ -74,7 +74,7 @@ var App = function () {
         /**
          * Listen on provided port, on all network interfaces.
          */
-        app.listen(self.port, self.ipaddress, function () {
+        self.app.listen(self.port, self.ipaddress, function () {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now()), self.ipaddress, self.port);
         });

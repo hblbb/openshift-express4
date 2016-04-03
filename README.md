@@ -1,8 +1,5 @@
-# openshift-express4
+# OpenShift Express4 Template
 
 An Example for using Express 4 with Openshift
+Blank project foke from https://github.com/master-atul/openshift-express4
 
-This is a blank template project.
-It is derived from express4 generator template project and openshift default project.
-
-Just clone the repo ! :)

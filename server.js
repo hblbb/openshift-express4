@@ -3,6 +3,7 @@
 var App = function () {
     //  Scope.
     var self = this;
+
     /*  ================================================================  */
     /*  Helper functions.                                                 */
     /*  ================================================================  */
@@ -65,19 +66,15 @@ var App = function () {
     };
 
     self.setupServer = function () {
-
-        /**
-         * Module dependencies.
-         */
-        var app = require('./app');
-        var http = require('http');
+        self.app = require('./app');
+        //var http = require('http');
+        //var server = http.createServer(app);
         //var port = normalizePort(self.port);
-        var server = http.createServer(app);
 
         /**
          * Listen on provided port, on all network interfaces.
          */
-        server.listen(self.port, self.ipaddress, function () {
+        app.listen(self.port, self.ipaddress, function () {
             console.log('%s: Node server started on %s:%d ...',
                         Date(Date.now()), self.ipaddress, self.port);
         });

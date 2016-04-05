@@ -1,6 +1,7 @@
-# OpenShift Express 4 Template
+# OpenShift Express 4 with MongoDB Template
 
-An Example for using Express 4 with Openshift
+An Example for using Express 4 and MongoDB with Openshift
 
-Blank project fork from 
-https://github.com/master-atul/openshift-express4
+Npm requirements:
+* Express
+* Mongoose
